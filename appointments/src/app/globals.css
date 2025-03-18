@@ -21,7 +21,11 @@
 }
 
 body {
-  background: var(--background);
+  /* background: url('/consultorio.jpg') no-repeat center center fixed;  */
+  background: linear-gradient(135deg, #5a7856, #d1b49e); /* verde y beige */
+
+
+
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
