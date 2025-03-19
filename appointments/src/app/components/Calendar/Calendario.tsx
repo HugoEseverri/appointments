@@ -32,10 +32,9 @@ const DateSelector = () => {
 
     return (
         <div className="flex justify-center items-center ml-[300px] mr-[300px] mb-[70px] mx-auto bg-gray-200 h-[750px]">
-            {/* Sección izquierda: Turnero */}
             <div className="flex-1 p-5">
-                <div className='flex flex-col'>
-                    <h2 className="text-2xl p-5 text-black">Selecciona una fecha</h2>
+                <div className='flex flex-col items-center'>
+                    <h2 className="text-2xl p-5 text-black mb-[50px]">Selecciona una fecha</h2>
                     <DatePicker
                         selected={startDate}
                         onChange={handleDateChange}
@@ -46,19 +45,20 @@ const DateSelector = () => {
                         dateFormat="MMMM d, yyyy h:mm aa"
                         timeCaption="Hora"
                         minDate={new Date()}
-                        className="w-full max-w-[500px] text-black p-4  border-2 border-[#5a7856] "
+                        className="w-[300px] text-black p-4  border-2 border-[#5a7856] "
+                        placeholderText='Seleccione fechas disponibles aquí'
                     />
                     <button 
                         onClick={handleSave} 
-                        className="mt-5 bg-[#5a7856] text-white py-2 px-4"
+                        className="mt-5 bg-[#5a7856] text-white py-2 px-4 w-[200px]"
                     >
-                        Guardar Turno
+                        Solicitar Turno
                     </button>
                 </div>
 
                 {turnos.length > 0 && (
                     <div className="mt-5 w-full max-w-[600px]">
-                        <h3 className="text-xl mb-4">Turnos guardados:</h3>
+                        <h3 className="text-xl mb-4 text-black">Turnos guardados:</h3>
                         <div className="grid grid-cols-3 gap-4 p-4 bg-gray-300 rounded-xl text-black">
                             <div className="font-semibold">Fecha</div>
                             <div className="font-semibold">Hora</div>
@@ -81,14 +81,12 @@ const DateSelector = () => {
                     </div>
                 )}
             </div>
-
-            {/* Sección derecha: Imagen */}
             <div className="flex-1 h-[750px] relative">
                 <Image
                     src={chair}
                     alt="Chair"
-                    layout="fill"      // Esto hace que la imagen cubra todo el contenedor
-                    objectFit="cover"  // Ajusta la imagen para que cubra todo el espacio sin deformarse
+                    layout="fill"
+                    objectFit="cover"
                 />
             </div>
         </div>
