@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sistema de Turnos
 
-## Getting Started
+Este es un proyecto pequeño cuyo objetivo es ir demostrando pequeñas funcionalidades utilizando diversas tecnologías. En este caso, se ha creado un sistema de gestión de turnos utilizando **Next.js**, **DatePicker**, **Toast** y **Tailwind CSS**. El proyecto está modularizado por componentes para facilitar su escalabilidad y mantenimiento.
 
-First, run the development server:
+## Tecnologías utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**: Framework de React para la creación de aplicaciones web escalables y rápidas.
+- **DatePicker**: Componente para la selección de fechas con soporte para selección de hora.
+- **Toast**: Mensajes emergentes para confirmaciones y alertas.
+- **Tailwind CSS**: Framework CSS de utilidad que permite un diseño altamente personalizable y fácil de usar.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Descripción del Proyecto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este proyecto es un **sistema de turnos** donde los usuarios pueden seleccionar una fecha y hora a través de un calendario interactivo. Cuando el usuario selecciona una fecha, se guarda como un "turno" y se muestra una notificación de confirmación utilizando el componente Toast.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Características
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Selección de fecha y hora**: Utiliza `react-datepicker` para una interfaz de usuario amigable.
+- **Modularización por componentes**: Los diferentes elementos están organizados como componentes reutilizables.
+- **Interactividad**: Muestra un toast de confirmación cuando un turno es creado exitosamente.
